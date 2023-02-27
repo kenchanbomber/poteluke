@@ -1,0 +1,17 @@
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.log svg {
+    transition: 200ms ease;
+}
+
+.log:hover svg {
+    transform: rotate(20deg);
+}

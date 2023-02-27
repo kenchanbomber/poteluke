@@ -1,0 +1,10 @@
+.target {
+    position: absolute;
+    top: 40px;
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    background-image: url("../images/space.jpg");
+    background-size: cover;
+    background-position: center;
+}
