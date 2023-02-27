@@ -1,4 +1,13 @@
-import { Container, Heading, Flex, Box, Text, Image } from "@chakra-ui/react";
+import {
+    Container,
+    Heading,
+    Flex,
+    Box,
+    Text,
+    Image,
+    Card,
+    useColorModeValue,
+} from "@chakra-ui/react";
 import Layout from "../components/layouts/Layout";
 import Earth from "../components/Earth";
 
@@ -65,8 +74,63 @@ export default function Home() {
                         <Box>株式会社 アバウトゼロ (Worked at About0)</Box>
                     </Flex>
                 </Box>
-                <Box mb={{ base: 4, md: 8 }}>
-                    <Heading variant="section-title">Works</Heading>
+                <Box as="section" mb={{ base: 4, md: 8 }}>
+                    <Heading variant="section-title">Service</Heading>
+                    <Box p={3}>
+                        <Card p={2} mb={4}>
+                            <Image
+                                boxSize="full"
+                                objectFit="cover"
+                                src="/cord-project.png"
+                                alt="Cord Projectのスクリーンショット"
+                                mb={1}
+                                borderRadius={5}
+                            />
+                            <Heading
+                                as="h3"
+                                fontSize="lg"
+                                textAlign="center"
+                                mb={1}
+                            >
+                                Web制作
+                            </Heading>
+                            <Text fontSize="sm">
+                                LP,
+                                WordPressサイトの開発。頻繁にコミュニケーションを取り、さまざまな機能にも対応できます。
+                            </Text>
+                        </Card>
+                        <Card p={2}>
+                            <Image
+                                boxSize="full"
+                                objectFit="cover"
+                                src="/joresan.png"
+                                alt="条例算のスクリーンショット"
+                                mb={1}
+                                borderRadius={5}
+                            />
+                            <Heading
+                                as="h3"
+                                fontSize="lg"
+                                textAlign="center"
+                                mb={1}
+                            >
+                                サービス開発
+                            </Heading>
+                            <Text fontSize="sm">
+                                アイデアがあるのなら、それを形にするお手伝いをします。情報共有を頻繁に行い、アイデア以上のサービスを作り上げましょう。
+                            </Text>
+                        </Card>
+                    </Box>
+                    <Box
+                        as="footer"
+                        w="100%"
+                        bg={useColorModeValue("#ffffff40", "#20202380")}
+                        css={{ backdropFilter: "blur(10px)" }}
+                        zIndex={2}
+                        textAlign="center"
+                    >
+                        &copy; 2023 Kengo Hirata. All Rights Reserved.
+                    </Box>
                 </Box>
             </Container>
         </Layout>
